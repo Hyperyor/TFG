@@ -15,8 +15,9 @@ namespace Idle
         public ParticleManager particleManager;
         public UpgradeManager upgradeManager;
         public AudioManager audioManager;
+        public PlantationManager plantationMan;
 
-        #region //Little singleton init method
+        #region //Singleton init method
         void Init()
         {
             if (Instance != null)
