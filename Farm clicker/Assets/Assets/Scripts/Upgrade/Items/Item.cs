@@ -13,6 +13,7 @@ namespace Idle
         public string itemName;
         public string description;
         public Sprite icon;
+
         [Header("UI")]
         public Image iconImage, priceImage;
         public Text nameText, descriptionText, priceText;
@@ -20,6 +21,9 @@ namespace Idle
 
         [Header("Value to add")]
         public int value;
+
+        [Header("Prefab reference")]
+        public GameObject crop;
 
         //Method for update UI
         public void UpdateUI()
