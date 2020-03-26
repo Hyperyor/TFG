@@ -89,6 +89,15 @@ namespace Core {
 			    
 		}
 
+        public void ShutDown()
+        {
+            image.fillAmount = 1.0f;
+
+            image.gameObject.SetActive(false);
+
+            working = false;
+        }
+
         public float CD
         {
             get

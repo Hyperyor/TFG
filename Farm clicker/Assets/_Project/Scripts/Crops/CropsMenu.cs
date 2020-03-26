@@ -12,14 +12,24 @@ namespace Crops
     {
         
         [SerializeField]
-        public Item[] cropsList = new Item[5];
+        public Item[] cropsList = new Item[7];
 
         public void CheckItems()
         {
-            Crop element = Managers.Instance.cropsMan.GetCropAt(0);
+            
+            for (int i = 0; i < cropsList.Length; i++)
+            {
+                Crop element = Managers.Instance.cropsMan.GetCropAt(i);
 
-            Item i = cropsList[0];
+                Item j = cropsList[i];
 
+                UpdateItem(j, element);
+            }
+
+        }
+
+        private void UpdateItem(Item i, Crop element)
+        {
             i.descriptionText.text = element.description + element.Benefits.ToString() + "$";
 
             i.nameText.text = element.itemName;
@@ -46,7 +56,6 @@ namespace Crops
             {
                 i.CanBuy(true);
             }
-
         }
         
 

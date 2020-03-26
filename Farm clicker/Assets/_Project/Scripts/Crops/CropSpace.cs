@@ -68,5 +68,16 @@ namespace Crops
 
             return plantedCrop;
         }
+
+        public void DeleteCrop()
+        {
+            this.gameObject.GetComponent<Button>().enabled = true;
+
+            cropImage.gameObject.SetActive(false);
+
+            addText.enabled = true;
+
+            gameObject.GetComponent<CooldownClicker>().ShutDown();
+        }
     }
 }
