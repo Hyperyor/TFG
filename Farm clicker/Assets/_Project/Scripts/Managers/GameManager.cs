@@ -20,7 +20,7 @@ namespace Core
             MoneyGained();
         }
         
-        public void CropBought(int money)
+        public void Buy(int money)
         {
             DataManager.data.Money -= money;
             Managers.Instance.uIManager.UpdateUI(); //Updating UI

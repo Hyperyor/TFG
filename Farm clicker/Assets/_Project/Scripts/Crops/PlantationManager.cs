@@ -31,7 +31,7 @@ namespace Core
         {
             Crop crop = Managers.Instance.cropsMan.GetCropAt(id);
 
-            Managers.Instance.gameManager.CropBought(crop.GetPrice());
+            Managers.Instance.gameManager.Buy(crop.GetPrice());
 
             selectedCropSpace.SetCropImage(crop);
             cropsMenu.gameObject.SetActive(false);

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1896831598710689420}
   - component: {fileID: 1899627735955282434}
   - component: {fileID: 1792076112373543932}
+  - component: {fileID: 3855419055861984885}
   m_Layer: 5
   m_Name: Harvest Line
   m_TagString: Untagged
@@ -75,6 +76,22 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &3855419055861984885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823087402900797370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5600d74fe7d7a4dbf3baef49e666e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropSpaceList:
+  - {fileID: 4528895257739854909}
+  - {fileID: 67462582855725623}
+  - {fileID: 67462583074835665}
 --- !u!1001 &67462583251581280
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,6 +103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crop Space
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482896791009639768, guid: 8de57befc1dc8c145b529245b89d891b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4482896791009639769, guid: 8de57befc1dc8c145b529245b89d891b,
         type: 3}
@@ -225,6 +247,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 67462583251581280}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4528895257739854909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4482896791009639773, guid: 8de57befc1dc8c145b529245b89d891b,
+    type: 3}
+  m_PrefabInstance: {fileID: 67462583251581280}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b246163ca30181b468a4dfe3e95812ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4528895257603002218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,6 +270,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crop Space (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482896791009639768, guid: 8de57befc1dc8c145b529245b89d891b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4482896791009639769, guid: 8de57befc1dc8c145b529245b89d891b,
         type: 3}
@@ -395,6 +434,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4528895257603002218}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &67462582855725623 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4482896791009639773, guid: 8de57befc1dc8c145b529245b89d891b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4528895257603002218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b246163ca30181b468a4dfe3e95812ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4528895257815839116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -406,6 +457,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Crop Space (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482896791009639768, guid: 8de57befc1dc8c145b529245b89d891b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4482896791009639769, guid: 8de57befc1dc8c145b529245b89d891b,
         type: 3}
@@ -565,3 +621,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 4528895257815839116}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &67462583074835665 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4482896791009639773, guid: 8de57befc1dc8c145b529245b89d891b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4528895257815839116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b246163ca30181b468a4dfe3e95812ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
