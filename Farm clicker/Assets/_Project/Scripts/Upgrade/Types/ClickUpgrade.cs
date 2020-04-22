@@ -1,6 +1,12 @@
-﻿namespace Core
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Core
 {
-    public class CityUpgrade : Upgrade
+
+
+    public class ClickUpgrade : Upgrade
     {
         //Base method is responsible for the purchase of the upgrade
         public override void UpgradeItem(int id)
@@ -12,12 +18,13 @@
             /////////////////////////////////////////////// #Start
             //This is where the logic of the action is written, provided that we have purchased
 
+            items[id].MakeUpgrade();
+
             //DataManager.data.MoneyByClick += items[id].value; //Adds Value to money by click
 
             /////////////////////////////////////////////// #End
 
             Upgraded();//The method is responsible for the successful purchase, makes saving
         }
-
     }
 }

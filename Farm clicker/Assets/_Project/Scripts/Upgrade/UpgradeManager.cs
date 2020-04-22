@@ -6,7 +6,7 @@ namespace Core
     {
 
         [Header("Components")]
-        public CityUpgrade cityUpgrade;
+        public ClickUpgrade clickUpgrade;
         public ResidentsUpgrade residentsUpgrade;
         public ComfortUpgrade comfortUpgrade;
         public AutomationUpgrade automationUpgrade;
@@ -18,9 +18,9 @@ namespace Core
         }
 
         ////////////////////////////////// Start: Calls upgrades from buttons
-        public void CityUpgrage(int itemId)
+        public void ClickUpgrade(int itemId)
         {
-            cityUpgrade.UpgradeItem(itemId); //Call the upgrade method in the City Upgrade script (whose ID item is the upgrade)
+            clickUpgrade.UpgradeItem(itemId); //Call the upgrade method in the City Upgrade script (whose ID item is the upgrade)
         }
 
         public void ResidentsUpgrade(int itemId)
@@ -43,10 +43,11 @@ namespace Core
         //Update UI
         public void UpdateUI()
         {
-            cityUpgrade.UpdateUI();
-            residentsUpgrade.UpdateUI();
-            comfortUpgrade.UpdateUI();
-            automationUpgrade.UpdateUI();
+            clickUpgrade.UpdateUI();
+            //cityUpgrade.UpdateUI();
+            //residentsUpgrade.UpdateUI();
+            //comfortUpgrade.UpdateUI();
+            //automationUpgrade.UpdateUI();
         }
 
         //saving upgrade data to file
@@ -56,22 +57,22 @@ namespace Core
             UpgradeListClear();
 
             //Write items to the cleared list
-            for (int i = 0; i < cityUpgrade.items.Count; i++)
-            {
-                DataManager.upgradeData.cityItems.Add(cityUpgrade.items[i].itemData);
-            }
-            for (int i = 0; i < residentsUpgrade.items.Count; i++)
-            {
-                DataManager.upgradeData.residentsItems.Add(residentsUpgrade.items[i].itemData);
-            }
-            for (int i = 0; i < comfortUpgrade.items.Count; i++)
-            {
-                DataManager.upgradeData.comfortItems.Add(comfortUpgrade.items[i].itemData);
-            }
-            for (int i = 0; i < automationUpgrade.items.Count; i++)
-            {
-                DataManager.upgradeData.automationItems.Add(automationUpgrade.items[i].itemData);
-            }
+            //for (int i = 0; i < cityUpgrade.items.Count; i++)
+            //{
+            //    DataManager.upgradeData.cityItems.Add(cityUpgrade.items[i].itemData);
+            //}
+            //for (int i = 0; i < residentsUpgrade.items.Count; i++)
+            //{
+            //    DataManager.upgradeData.residentsItems.Add(residentsUpgrade.items[i].itemData);
+            //}
+            //for (int i = 0; i < comfortUpgrade.items.Count; i++)
+            //{
+            //    DataManager.upgradeData.comfortItems.Add(comfortUpgrade.items[i].itemData);
+            //}
+            //for (int i = 0; i < automationUpgrade.items.Count; i++)
+            //{
+            //    DataManager.upgradeData.automationItems.Add(automationUpgrade.items[i].itemData);
+            //}
 
             //save all data
             DataManager.SaveData();
@@ -79,37 +80,37 @@ namespace Core
         //load data
         public void UpgradeLoad()
         {
-            if (DataManager.upgradeData.cityItems.Count > 0)
-                for (int i = 0; i < cityUpgrade.items.Count; i++)
-                {
-                    //write item from file to item on scene
-                    cityUpgrade.items[i].itemData = DataManager.upgradeData.cityItems[i];
-                }
-            if (DataManager.upgradeData.residentsItems.Count > 0)
-                for (int i = 0; i < residentsUpgrade.items.Count; i++)
-                {
-                    residentsUpgrade.items[i].itemData = DataManager.upgradeData.residentsItems[i];
-                }
-            if (DataManager.upgradeData.comfortItems.Count > 0)
-                for (int i = 0; i < comfortUpgrade.items.Count; i++)
-                {
-                    comfortUpgrade.items[i].itemData = DataManager.upgradeData.comfortItems[i];
-                }
-            if (DataManager.upgradeData.automationItems.Count > 0)
-                for (int i = 0; i < automationUpgrade.items.Count; i++)
-                {
-                    automationUpgrade.items[i].itemData = DataManager.upgradeData.automationItems[i];
-                }
+            //if (DataManager.upgradeData.cityItems.Count > 0)
+            //    for (int i = 0; i < cityUpgrade.items.Count; i++)
+            //    {
+            //        //write item from file to item on scene
+            //        cityUpgrade.items[i].itemData = DataManager.upgradeData.cityItems[i];
+            //    }
+            //if (DataManager.upgradeData.residentsItems.Count > 0)
+            //    for (int i = 0; i < residentsUpgrade.items.Count; i++)
+            //    {
+            //        residentsUpgrade.items[i].itemData = DataManager.upgradeData.residentsItems[i];
+            //    }
+            //if (DataManager.upgradeData.comfortItems.Count > 0)
+            //    for (int i = 0; i < comfortUpgrade.items.Count; i++)
+            //    {
+            //        comfortUpgrade.items[i].itemData = DataManager.upgradeData.comfortItems[i];
+            //    }
+            //if (DataManager.upgradeData.automationItems.Count > 0)
+            //    for (int i = 0; i < automationUpgrade.items.Count; i++)
+            //    {
+            //        automationUpgrade.items[i].itemData = DataManager.upgradeData.automationItems[i];
+            //    }
 
         }
 
         //Сlear method
         void UpgradeListClear()
         {
-            DataManager.upgradeData.cityItems.Clear();
-            DataManager.upgradeData.residentsItems.Clear();
-            DataManager.upgradeData.comfortItems.Clear();
-            DataManager.upgradeData.automationItems.Clear();
+            //DataManager.upgradeData.cityItems.Clear();
+            //DataManager.upgradeData.residentsItems.Clear();
+            //DataManager.upgradeData.comfortItems.Clear();
+            //DataManager.upgradeData.automationItems.Clear();
         }
     }
 }

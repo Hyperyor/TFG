@@ -6,7 +6,7 @@ namespace Core
     public class Upgrade : MonoBehaviour
     {
         [Header("Components")]
-        public List<Item> items = new List<Item>();
+        public List<UpgradeItem> items = new List<UpgradeItem>();
         protected bool priced;
 
         //Base method is responsible for the purchase of the upgrade
@@ -18,7 +18,7 @@ namespace Core
                 //With a successful purchase
                 DataManager.data.Money -= items[id].itemData.price; //take money
                 items[id].itemData.price = items[id].itemData.price * 2; //Increasing the price by 2
-                priced = true; //Approve further logic.
+                priced = true; //this means we CAN upgrade the item
             }
         }
 

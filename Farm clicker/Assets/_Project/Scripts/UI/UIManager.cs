@@ -6,10 +6,10 @@ namespace Core
     public sealed class UIManager : MonoBehaviour
     {
         //enum
-        public enum ShopScreenType { Closed, CityScreen, ResidentsScreen, ComfortScreen, AutomationScreen }
+        public enum ShopScreenType { Closed, ClickScreen, ResidentsScreen, ComfortScreen, AutomationScreen }
 
         [Header("Screens")]
-        public GameObject CityScreen;
+        public GameObject ClickScreen;
         public GameObject ResidentsScreen;
         public GameObject ComfortScreen;
         public GameObject AutomationScreen;
@@ -76,9 +76,9 @@ namespace Core
         {
             switch (screenName)
             {
-                case "CityScreen":
+                case "ClickScreen":
                     //Call open method
-                    ChangeShopScreen(ShopScreenType.CityScreen);
+                    ChangeShopScreen(ShopScreenType.ClickScreen);
                     break;
                 case "ResidentsScreen":
                     ChangeShopScreen(ShopScreenType.ResidentsScreen);
@@ -109,11 +109,11 @@ namespace Core
                 CloseShopScreens();
                 switch (shopScreenType)
                 {
-                    case ShopScreenType.CityScreen:
+                    case ShopScreenType.ClickScreen:
                         //set the class variable shopScreenType to local shopScreenType
                         this.shopScreenType = shopScreenType;
                         //Turn on the screen
-                        CityScreen.SetActive(true);
+                        ClickScreen.SetActive(true);
                         break;
                     case ShopScreenType.ResidentsScreen:
                         this.shopScreenType = shopScreenType;
@@ -138,7 +138,7 @@ namespace Core
         void CloseShopScreens()
         {
             //Just turn off all screens, nothing ordinary :)
-            CityScreen.SetActive(false);
+            ClickScreen.SetActive(false);
             ResidentsScreen.SetActive(false);
             ComfortScreen.SetActive(false);
             AutomationScreen.SetActive(false);

@@ -1,16 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using System;
 
 namespace Core
 {
-
-    //public enum ActionType : int { NONE= 0, CLICKUPGRADE = 1 }
-
-    public class Item : MonoBehaviour
+    public abstract class UpgradeItem : MonoBehaviour
     {
         [Header("Components")]
-        public ItemData itemData;
+        public UpgradeItemData itemData;
 
         [Header("Item info")]
         public string itemName;
@@ -37,9 +36,12 @@ namespace Core
             priceText.text = ":" + UIManager.IntParseToString(itemData.price);
         }
 
+        //abstract method that children will implement so they can make different things with the same base
+        public abstract void MakeUpgrade();
+
         public void CanBuy(bool val)
         {
-            if(val)
+            if (val)
             {
                 tooExpensiveImage.gameObject.SetActive(false);
                 buyBtn.GetComponent<Button>().enabled = true;
@@ -51,14 +53,13 @@ namespace Core
             }
 
         }
-        
+
     }
 
     //The class that stores the data to save the Item
     [Serializable]
-    public class ItemData
+    public class UpgradeItemData
     {
         public long price;
     }
-
 }
