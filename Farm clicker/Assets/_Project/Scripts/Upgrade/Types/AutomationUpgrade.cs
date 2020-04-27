@@ -13,7 +13,7 @@ namespace Core
             /////////////////////////////////////////////// #Start
             //This is where the logic of the action is written, provided that we have purchased
 
-            DataManager.data.MoneyPerSecond += items[id].value; //Adds Value to Money Per Second
+            //DataManager.data.MoneyPerSecond += items[id].value; //Adds Value to Money Per Second
 
             /////////////////////////////////////////////// #End
 

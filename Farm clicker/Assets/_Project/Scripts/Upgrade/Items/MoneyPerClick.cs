@@ -7,9 +7,9 @@ namespace Core
 
     public class MoneyPerClick : UpgradeItem
     {
-        public override void MakeUpgrade()
+        public override void MakeUpgrade(UpgradeItemModel model)
         {
-            DataManager.data.MoneyByClick += this.value;
+            DataManager.data.MoneyByClick += model.value;
         }
     }
 }

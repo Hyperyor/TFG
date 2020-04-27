@@ -20,7 +20,7 @@ namespace Core
         ////////////////////////////////// Start: Calls upgrades from buttons
         public void ClickUpgrade(int itemId)
         {
-            clickUpgrade.UpgradeItem(itemId); //Call the upgrade method in the City Upgrade script (whose ID item is the upgrade)
+            clickUpgrade.UpgradeItem(itemId); //Call the upgrade method in the click Upgrade script (whose ID item is the upgrade)
         }
 
         public void ResidentsUpgrade(int itemId)
