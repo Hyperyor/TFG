@@ -24,8 +24,8 @@ namespace Core
         {
             DataManager.data.Money -= money;
             Managers.Instance.uIManager.UpdateUI(); //Updating UI
-
             //play a sound
+            Managers.Instance.audioManager.PlaySound(Managers.Instance.audioManager.cash);
         }
 
         private void MoneyGained()
@@ -46,19 +46,7 @@ namespace Core
         {
             Managers.Instance.uIManager.ChangeScreen("PauseMenu");
         }
-
-        //Mthhod call ads from AdmobManager
-        //public void ShowRewardAd()
-        //{
-        //    AdmobManager.instance.ShowBanner(); //An example of calling a banner from a script
-        //   // AdmobManager.instance.HideBanner(); //Hide banner
-
-
-        //    AdmobManager.instance.ShowInterstitial();// An example of calling a Interstitial from a script
-
-        //    AdmobManager.instance.rewardCount = 10; //Set reward value
-        //    AdmobManager.instance.ShowReward(); //Call the video
-        //}
+        
 
         //The loop of adding money per second
         IEnumerator MoneyPerSecond()

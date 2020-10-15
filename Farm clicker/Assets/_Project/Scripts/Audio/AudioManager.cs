@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Audio Effects")]
     public AudioClip Coin;
+    public AudioClip cash;
 
     // Method of playing effect, accepts any effect from cached
     public void PlaySound(AudioClip sound)

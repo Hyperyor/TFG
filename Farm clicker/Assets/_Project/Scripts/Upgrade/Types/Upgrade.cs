@@ -18,6 +18,7 @@ namespace Core
             {
                 //With a successful purchase
                 DataManager.data.Money -= models[id].price; //take money
+                Managers.Instance.audioManager.PlaySound(Managers.Instance.audioManager.cash); //play a sound
                 //items[id].itemData.price = items[id].itemData.price * 2; //Increasing the price by 2
                 priced = true; //this means we CAN upgrade the item
             }
