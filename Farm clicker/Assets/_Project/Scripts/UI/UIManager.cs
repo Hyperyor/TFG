@@ -13,6 +13,7 @@ namespace Core
         public GameObject ResidentsScreen;
         public GameObject ComfortScreen;
         public GameObject AutomationScreen;
+        public GameObject volumeOptions;
 
         [Header("Text")]
         public Text MoneyText;
@@ -170,5 +171,21 @@ namespace Core
         }
         #endregion
 
+        //method to show/hide volume settings menu
+        public void ShowVolumeOptions()
+        {
+            if(volumeOptions.gameObject.activeInHierarchy)
+            {
+                //save volume data in json file
+
+                //hide the volume menu
+                volumeOptions.gameObject.SetActive(false);
+            }
+            else
+            {
+                volumeOptions.gameObject.SetActive(true);
+            }
+            
+        }
     }
 }

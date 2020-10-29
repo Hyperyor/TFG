@@ -6,6 +6,9 @@ namespace Core
 {
     public sealed class GameManager : MonoBehaviour
     {
+        [SerializeField]
+        private ExitApp exit;
+
         //The method is invoked by tapping the screen
         public void Click()
         {
@@ -46,7 +49,21 @@ namespace Core
         {
             Managers.Instance.uIManager.ChangeScreen("PauseMenu");
         }
-        
+
+        //Method to show volume options
+        public void VolumeOptions()
+        {
+            this.Pause(); //we hide/show the pause menu
+            Managers.Instance.uIManager.ShowVolumeOptions();
+        }
+
+        public void ExitApp()
+        {
+            //save game
+
+            //closing the app
+            exit.Exit();
+        }
 
         //The loop of adding money per second
         IEnumerator MoneyPerSecond()
