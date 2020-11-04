@@ -177,7 +177,7 @@ namespace Core
             if(volumeOptions.gameObject.activeInHierarchy)
             {
                 //save volume data in json file
-
+                Managers.Instance.audioManager.SaveVolumeData();
                 //hide the volume menu
                 volumeOptions.gameObject.SetActive(false);
             }

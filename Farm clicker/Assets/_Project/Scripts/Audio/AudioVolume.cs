@@ -19,7 +19,7 @@ public class AudioVolume : MonoBehaviour {
     {
         audioMix.GetFloat(volumeVariableName, out actualVolume);
 
-
+       
         GetComponent<Slider>().value = (actualVolume - (-40)) / (0 - (-40));
     }
 

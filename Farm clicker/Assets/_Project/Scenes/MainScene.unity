@@ -2689,6 +2689,7 @@ GameObject:
   - component: {fileID: 312804289}
   - component: {fileID: 312804290}
   - component: {fileID: 312804291}
+  - component: {fileID: 312804293}
   m_Layer: 0
   m_Name: Data
   m_TagString: Untagged
@@ -2735,6 +2736,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: data
+--- !u!114 &312804293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312804288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd6b3e6d146e621419c9609ed5725704, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &313979832
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9449,8 +9462,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sound: {fileID: 1529920971}
+  audioMixer: {fileID: 24100000, guid: bce94ae9fb4067d45baeef6953416f4e, type: 2}
   Coin: {fileID: 8300000, guid: 4f7878d8e1d9f85428b1fccab37816cb, type: 3}
   cash: {fileID: 8300000, guid: aa715415fbc178646afd3b11757d4066, type: 3}
+  serializedData:
+    masterVolume: 0
+    musicVolume: 0
+    effectsVolume: 0
 --- !u!114 &1192139901
 MonoBehaviour:
   m_ObjectHideFlags: 0
