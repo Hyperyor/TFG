@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -68,11 +69,19 @@ public class AudioManager : MonoBehaviour
 
     public void LoadVolumeData()
     {
-        serializedData = JsonSaver.GetFile<AudioData>();
+        try
+        {
+            serializedData = JsonSaver.GetFile<AudioData>();
 
-        audioMixer.SetFloat("MasterVolume", serializedData.masterVolume);
-        audioMixer.SetFloat("MusicVolume", serializedData.musicVolume);
-        audioMixer.SetFloat("EffectsVolume", serializedData.effectsVolume);
+            audioMixer.SetFloat("MasterVolume", serializedData.masterVolume);
+            audioMixer.SetFloat("MusicVolume", serializedData.musicVolume);
+            audioMixer.SetFloat("EffectsVolume", serializedData.effectsVolume);
+        }
+        catch(FileNotFoundException ex) //in case of error
+        {
+            serializedData = new AudioData(); //create the object again
+            SaveVolumeData(); //save data, creating the file
+        }
         
     }
 }
