@@ -33,8 +33,10 @@ namespace Core
         {
             iconImage.sprite = icon;
             nameText.text = itemName;
-            descriptionText.text = description + ": " + value;
-            priceText.text = ":" + UIManager.IntParseToString(itemData.price);
+            descriptionText.text = description + UIManager.IntParseToString(value) + "$"; 
+            priceText.text = ":" + UIManager.IntParseToString(itemData.price) + "$";
+
+            
         }
 
         public void CanBuy(bool val)

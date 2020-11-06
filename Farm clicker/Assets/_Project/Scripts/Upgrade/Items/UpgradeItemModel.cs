@@ -20,5 +20,15 @@ namespace Core
 
         [Header("Price it costs")]
         public int price;
+
+        public void UpgradePrice()
+        {
+            if(price < 300000)
+            {
+                price += price * ((int)3);
+            }
+            
+        }
+
     }
 }

@@ -30,7 +30,7 @@ namespace Crops
 
         private void UpdateItem(Item i, Crop element)
         {
-            i.descriptionText.text = element.description + element.Benefits.ToString() + "$";
+            i.descriptionText.text = element.description;
 
             i.nameText.text = element.itemName;
 
@@ -40,7 +40,7 @@ namespace Crops
 
             i.itemData.price = element.GetPrice();
 
-            i.description = element.description + element.Benefits.ToString() + "$";
+            i.description = element.description;
 
             i.itemName = element.itemName;
 
@@ -56,6 +56,8 @@ namespace Crops
             {
                 i.CanBuy(true);
             }
+
+            i.UpdateUI();
         }
         
 

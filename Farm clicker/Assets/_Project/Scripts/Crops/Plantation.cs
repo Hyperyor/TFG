@@ -28,7 +28,7 @@ namespace Crops
 
         private void UpdateButtonText()
         {
-            unlockButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Buy Harvest Line: " + unlockPrice + "$";
+            unlockButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Buy Harvest Line: " + UIManager.IntParseToString(unlockPrice) + " $";
         }
 
         public void UnlockLine()
@@ -38,9 +38,12 @@ namespace Crops
                 harvestLineList[linesUnlocked].gameObject.SetActive(true);
                 linesUnlocked++;
 
+                
                 Managers.Instance.gameManager.Buy(unlockPrice);
 
-                if(linesUnlocked == 7)
+                unlockPrice += (unlockPrice * ((int)2.5));
+                UpdateButtonText();
+                if (linesUnlocked == 7)
                 {
                     unlockButton.gameObject.SetActive(false);
                 }

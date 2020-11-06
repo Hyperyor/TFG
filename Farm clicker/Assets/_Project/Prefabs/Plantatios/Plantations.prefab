@@ -212,7 +212,7 @@ MonoBehaviour:
   - {fileID: 4723757887360839303}
   - {fileID: 4723757887195084280}
   - {fileID: 4723757887876911700}
-  unlockPrice: 10
+  unlockPrice: 100
   linesUnlocked: 0
   unlockButton: {fileID: 8362933755547484499}
 --- !u!1 &8362933755255860373

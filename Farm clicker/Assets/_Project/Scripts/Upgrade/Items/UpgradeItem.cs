@@ -25,12 +25,16 @@ namespace Core
         {
             iconImage.sprite = model.icon;
             nameText.text = model.upgradeName;
-            descriptionText.text = model.description + ": " + model.value;
-            priceText.text = ":" + UIManager.IntParseToString(model.price);
+            descriptionText.text = model.description + ": " + model.value + "$";
+            priceText.text = ":" + UIManager.IntParseToString(model.price) + "$";
+
+            UpdateUI();
         }
 
         //abstract method that children will implement so they can make different things with the same base
         public abstract void MakeUpgrade(UpgradeItemModel model);
+
+        public abstract void UpdateUI();
 
         //public void CanBuy(bool val)
         //{

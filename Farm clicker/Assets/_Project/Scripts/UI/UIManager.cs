@@ -46,26 +46,27 @@ namespace Core
         //Convert number to string with zero replaced by letters
         public static string IntParseToString(long value)
         {
+            
             string result = value.ToString();
 
             if (value >= 1000)
             {
-                result = Mathf.Floor(((float)value / 100)) / 10 + " k";
+                result = Mathf.Floor(((float)value / 100)) / 10 + "k";
             }
 
             if (value >= 1000000)
             {
-                result = Mathf.Floor(((float)value / 10000)) / 100 + " mi";
+                result = Mathf.Floor(((float)value / 10000)) / 100 + "mi";
             }
 
             if (value >= 1000000000)
             {
-                result = Mathf.Floor(((float)value / 10000000)) / 100 + " bi";
+                result = Mathf.Floor(((float)value / 10000000)) / 100 + "bi";
             }
 
             if (value >= 1000000000000)
             {
-                result = Mathf.Floor(((float)value / 1000000000)) / 1000 + " qua";
+                result = Mathf.Floor(((float)value / 1000000000)) / 1000 + "qua";
             }
 
             return result;
