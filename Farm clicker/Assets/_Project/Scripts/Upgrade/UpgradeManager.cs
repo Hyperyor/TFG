@@ -44,9 +44,7 @@ namespace Core
         public void UpdateUI()
         {
             clickUpgrade.UpdateUI();
-            //cityUpgrade.UpdateUI();
-            //residentsUpgrade.UpdateUI();
-            //comfortUpgrade.UpdateUI();
+            
             //automationUpgrade.UpdateUI();
         }
 

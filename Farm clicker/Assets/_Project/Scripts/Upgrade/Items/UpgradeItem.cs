@@ -28,6 +28,15 @@ namespace Core
             descriptionText.text = model.description + ": " + model.value + "$";
             priceText.text = ":" + UIManager.IntParseToString(model.price) + "$";
 
+            if(DataManager.data.Money >= model.price)
+            {
+                CanBuy(true);
+            }
+            else
+            {
+                CanBuy(false);
+            }
+
             UpdateUI();
         }
 
@@ -36,20 +45,20 @@ namespace Core
 
         public abstract void UpdateUI();
 
-        //public void CanBuy(bool val)
-        //{
-        //    if (val)
-        //    {
-        //        tooExpensiveImage.gameObject.SetActive(false);
-        //        buyBtn.GetComponent<Button>().enabled = true;
-        //    }
-        //    else
-        //    {
-        //        tooExpensiveImage.gameObject.SetActive(true);
-        //        buyBtn.GetComponent<Button>().enabled = false;
-        //    }
+        public void CanBuy(bool val)
+        {
+            if (val)
+            {
+                tooExpensiveImage.gameObject.SetActive(false);
+                buyBtn.GetComponent<Button>().enabled = true;
+            }
+            else
+            {
+                tooExpensiveImage.gameObject.SetActive(true);
+                buyBtn.GetComponent<Button>().enabled = false;
+            }
 
-        //}
+        }
 
     }
 
