@@ -22,7 +22,7 @@ public class JsonSaver : MonoBehaviour
     {
         string path = Application.persistentDataPath;
         Debug.Log(Application.persistentDataPath);
-        path += "\\" + type.ToString() + ".txt";
+        path += "/" + type.ToString() + ".json";
         return path;
     }
 }
