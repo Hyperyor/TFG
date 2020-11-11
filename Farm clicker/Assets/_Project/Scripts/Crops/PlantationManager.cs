@@ -13,6 +13,14 @@ namespace Core
 
         private CropSpace selectedCropSpace;
 
+        public Plantation plantation;
+
+        private void Awake()
+        {
+            //load saves from file
+            LoadData();
+        }
+
         //Method to show crops options
         public void ShowCropsOptions(CropSpace scs)
         {
@@ -25,6 +33,7 @@ namespace Core
         public void HideCropsOptions()
         {
             cropsMenu.gameObject.SetActive(false);
+            SavePlantationData();
         }
 
         public void PlantSeed(int id)
@@ -34,7 +43,24 @@ namespace Core
             Managers.Instance.gameManager.Buy(crop.GetPrice());
 
             selectedCropSpace.SetCropImage(crop);
+            selectedCropSpace.cropSpaceData.crop = id;
             cropsMenu.gameObject.SetActive(false);
+
+            SavePlantationData();
+        }
+
+        public void LoadData()
+        {
+            plantation.LoadPlantationData();
+        }
+
+        public void SavePlantationData()
+        {
+            DataManager.plantationData.harvestLineList.Clear();
+
+            plantation.SavePlantationData();
+
+            DataManager.SaveData();
         }
     }
 }

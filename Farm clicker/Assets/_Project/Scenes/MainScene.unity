@@ -6937,6 +6937,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894304543}
   m_CullTransparentMesh: 0
+--- !u!114 &905688180 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8362933755239792061, guid: cb1cf5ce9e26d22439890f046726023a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8362933755124011264}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14858e91f638b254ab7cdcfd4c1c9381, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &910871301
 GameObject:
   m_ObjectHideFlags: 0
@@ -8857,6 +8869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cropsMenu: {fileID: 788323493}
+  plantation: {fileID: 905688180}
 --- !u!114 &1192139902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14252,41 +14265,81 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
+    - target: {fileID: 5348421551284513333, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5348421551600162003, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1192139901}
+    - target: {fileID: 5348421551600162003, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392715086001063180, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 5392715086001063180, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392715086173322300, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 5392715086173322300, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392715087238641692, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 5392715087238641692, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392715087334229199, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 5392715087334229199, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392715087445154692, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 5392715087445154692, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 1192139901}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5392715087634210736, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
+    - target: {fileID: 5392715087634210736, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8362933755028610314, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: m_text
@@ -14417,11 +14470,21 @@ PrefabInstance:
       propertyPath: unlockPrice
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 8362933755239792061, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: plantationData.unlockPrice
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 8362933755512134719, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
+    - target: {fileID: 8362933755512134719, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8362933755547484500, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: m_Color.r
@@ -14458,61 +14521,121 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
+    - target: {fileID: 8421932709382254832, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8421932709590624698, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1192139901}
+    - target: {fileID: 8421932709590624698, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932709604297763, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932709604297763, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932709756638056, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932709756638056, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932709769959260, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932709769959260, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932709823492805, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932709823492805, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932709940112782, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932709940112782, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932710264065558, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932710264065558, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932710418484704, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932710418484704, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932710490502352, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932710490502352, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421932711174484742, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
     - target: {fileID: 8421932711174484742, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 1192139901}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8421932711353502262, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 1192139901}
+    - target: {fileID: 8421932711353502262, guid: cb1cf5ce9e26d22439890f046726023a,
+        type: 3}
+      propertyPath: cropSpaceData.crop
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb1cf5ce9e26d22439890f046726023a, type: 3}
 --- !u!1001 &8543928700577140035

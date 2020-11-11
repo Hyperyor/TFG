@@ -12,49 +12,53 @@ namespace Crops
         [SerializeField]
         private HarvestLine[] harvestLineList = new HarvestLine[7];
 
-        [SerializeField]
-        private int unlockPrice;
+        //[SerializeField]
+        //private int unlockPrice;
 
-        [SerializeField]
-        private int linesUnlocked;
+        //[SerializeField]
+        //private int linesUnlocked;
+
+        //public PlantationData plantationData;
 
         [SerializeField]
         private Button unlockButton;
 
         private void Awake()
         {
-            UpdateButtonText();
+            //UpdateButtonText();
         }
 
         private void UpdateButtonText()
         {
-            unlockButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Buy Harvest Line: " + UIManager.IntParseToString(unlockPrice) + " $";
+            unlockButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Buy Harvest Line: " + UIManager.IntParseToString(DataManager.plantationData.unlockPrice) + " $";
         }
 
         public void UnlockLine()
         {
             if(CanUnlock())
             {
-                harvestLineList[linesUnlocked].gameObject.SetActive(true);
-                linesUnlocked++;
+                harvestLineList[DataManager.plantationData.linesUnlocked].gameObject.SetActive(true);
+                DataManager.plantationData.linesUnlocked++;
 
                 
-                Managers.Instance.gameManager.Buy(unlockPrice);
+                Managers.Instance.gameManager.Buy(DataManager.plantationData.unlockPrice);
 
-                unlockPrice += (unlockPrice * ((int)2.5));
+                DataManager.plantationData.unlockPrice += (DataManager.plantationData.unlockPrice * ((int)2.5));
                 UpdateButtonText();
-                if (linesUnlocked == 7)
+                if (DataManager.plantationData.linesUnlocked == 7)
                 {
                     unlockButton.gameObject.SetActive(false);
                 }
+
+                Managers.Instance.plantationMan.SavePlantationData();
             }
         }
 
         private bool CanUnlock()
         {
-            if(linesUnlocked <= 6) //is there are some still lines unlocked
+            if(DataManager.plantationData.linesUnlocked <= 6) //is there are some still lines unlocked
             {
-                if(DataManager.data.Money >= unlockPrice)
+                if(DataManager.data.Money >= DataManager.plantationData.unlockPrice)
                 {
                     return true;
                 }
@@ -63,7 +67,37 @@ namespace Crops
 
             return false;
         }
+
+        public void LoadPlantationData()
+        {
+            UpdateButtonText();
+
+            if (DataManager.plantationData.linesUnlocked == 7)
+            {
+                unlockButton.gameObject.SetActive(false);
+            }
+            
+            for (int i = 0; i < DataManager.plantationData.linesUnlocked; i++)
+            {
+                harvestLineList[i].gameObject.SetActive(true);
+                harvestLineList[i].LoadCropSpace(DataManager.plantationData.harvestLineList[i]);
+            }
+            
+        }
+
+        public void SavePlantationData()
+        {
+            for (int i = 0; i < harvestLineList.Length; i++)
+            {
+                harvestLineList[i].SaveHarvestLineData();
+                DataManager.plantationData.harvestLineList.Add(harvestLineList[i].data);
+            }
+        }
     }
+
+    
+
+    
 }
 
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Crops;
+using UnityEngine;
 
 namespace Core
 {
@@ -9,7 +10,7 @@ namespace Core
 
         public static Data data;
         public static UpgradeData upgradeData;
-        
+        public static PlantationData plantationData;
 
         private void Awake()
         {
@@ -21,6 +22,7 @@ namespace Core
             //Create an instance of classes
             data = new Data();
             upgradeData = new UpgradeData();
+            plantationData = new PlantationData();
 
             //Cached component from our Gameobject
             dataSaver = GetComponent<DataSaver>();
@@ -35,6 +37,8 @@ namespace Core
 
                 data.Money = 10;
                 data.MoneyByClick = 1;
+                plantationData.linesUnlocked = 0;
+                plantationData.unlockPrice = 150;
 
                 SaveData();
             }
@@ -44,10 +48,11 @@ namespace Core
         //Static save method, can be called from any class "DataManager.SaveData();"
         public static void SaveData()
         {
-            object[] obj = new object[2]; // Create a local variable for an array of objects
+            object[] obj = new object[3]; // Create a local variable for an array of objects
             //register the objects we need
             obj[0] = data;
             obj[1] = upgradeData;
+            obj[2] = plantationData;
 
             dataSaver.Save(obj); //Save to DataSaver
         }
@@ -63,6 +68,7 @@ namespace Core
             {
                 data = obj[0] as Data;
                 upgradeData = obj[1] as UpgradeData;
+                plantationData = obj[2] as PlantationData;
             }
 
         }

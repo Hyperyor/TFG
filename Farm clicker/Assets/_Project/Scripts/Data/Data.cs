@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Crops;
+using System;
 using System.Collections.Generic;
 
 namespace Core
@@ -19,6 +20,15 @@ namespace Core
     {
         public List<UpgradeItemData> clickItems = new List<UpgradeItemData>();
         
+    }
+
+    [System.Serializable]
+    public class PlantationData
+    {
+        public int unlockPrice;
+        public int linesUnlocked;
+
+        public List<HarvestLineData> harvestLineList = new List<HarvestLineData>();
     }
 
 

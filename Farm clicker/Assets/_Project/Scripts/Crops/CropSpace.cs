@@ -21,6 +21,8 @@ namespace Crops
         private Image cropImage;
 
         private Crop plantedCrop;
+        
+        public CropSpaceData cropSpaceData;
 
         public void Click()
         {
@@ -29,6 +31,7 @@ namespace Crops
 
         public void SetCropImage(Crop c)
         {
+
             plantedCrop = c;
 
             ChangeCropState(0);
@@ -38,9 +41,9 @@ namespace Crops
             cropImage.gameObject.SetActive(true);
 
             addText.enabled = false;
-
+            
             gameObject.GetComponent<CooldownClicker>().CD = plantedCrop.HaversTime;
-
+            
             gameObject.GetComponent<CooldownClicker>().StartTimer();
         }
 
@@ -77,7 +80,27 @@ namespace Crops
 
             addText.enabled = true;
 
+            cropSpaceData.crop = -1;
+
             gameObject.GetComponent<CooldownClicker>().ShutDown();
+
+            manager.SavePlantationData();
         }
+
+        public void LoadCropSpaceData()
+        {
+            //re-plant the crop
+            SetCropImage(Managers.Instance.cropsMan.GetCropAt(cropSpaceData.crop));
+            
+        }
+    }
+    
+
+    [System.Serializable]
+    public class CropSpaceData
+    {
+        public int crop;
+        
+        
     }
 }

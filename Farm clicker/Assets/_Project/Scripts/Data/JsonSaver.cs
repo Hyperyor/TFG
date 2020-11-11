@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
+//Original Author: Alejandro Clavijo //Modified by: Jose Luis Bernal Navarrete
 public class JsonSaver : MonoBehaviour
 {
     public static void SaveObject(object obj)
