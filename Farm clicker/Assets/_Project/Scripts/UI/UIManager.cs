@@ -10,8 +10,6 @@ namespace Core
 
         [Header("Screens")]
         public GameObject ClickScreen;
-        public GameObject ResidentsScreen;
-        public GameObject ComfortScreen;
         public GameObject AutomationScreen;
         public GameObject volumeOptions;
 
@@ -82,12 +80,6 @@ namespace Core
                     //Call open method
                     ChangeShopScreen(ShopScreenType.ClickScreen);
                     break;
-                case "ResidentsScreen":
-                    ChangeShopScreen(ShopScreenType.ResidentsScreen);
-                    break;
-                case "ComfortScreen":
-                    ChangeShopScreen(ShopScreenType.ComfortScreen);
-                    break;
                 case "AutomationScreen":
                     ChangeShopScreen(ShopScreenType.AutomationScreen);
                     break;
@@ -117,14 +109,6 @@ namespace Core
                         //Turn on the screen
                         ClickScreen.SetActive(true);
                         break;
-                    case ShopScreenType.ResidentsScreen:
-                        this.shopScreenType = shopScreenType;
-                        ResidentsScreen.SetActive(true);
-                        break;
-                    case ShopScreenType.ComfortScreen:
-                        this.shopScreenType = shopScreenType;
-                        ComfortScreen.SetActive(true);
-                        break;
                     case ShopScreenType.AutomationScreen:
                         this.shopScreenType = shopScreenType;
                         AutomationScreen.SetActive(true);
@@ -141,8 +125,6 @@ namespace Core
         {
             //Just turn off all screens, nothing ordinary :)
             ClickScreen.SetActive(false);
-            ResidentsScreen.SetActive(false);
-            ComfortScreen.SetActive(false);
             AutomationScreen.SetActive(false);
         }
         #endregion

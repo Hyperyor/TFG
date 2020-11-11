@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,16 +20,25 @@ namespace Core
         public int value;
 
         [Header("Price it costs")]
-        public int price;
+        //public int price;
+        public UpgradeItemData priceData;
+
 
         public void UpgradePrice()
         {
-            if(price < 300000)
+            if(priceData.price < 300000)
             {
-                price += price * ((int)3);
+                priceData.price += priceData.price * ((int)3);
             }
             
         }
 
+    }
+
+    //The class that stores the data to save the Item
+    [Serializable]
+    public class UpgradeItemData
+    {
+        public long price;
     }
 }

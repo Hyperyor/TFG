@@ -19,8 +19,7 @@ namespace Core
             //This is where the logic of the action is written, provided that we have purchased
 
             items[id].MakeUpgrade(models[id]);
-
-            //DataManager.data.MoneyByClick += items[id].value; //Adds Value to money by click
+            
 
             /////////////////////////////////////////////// #End
 

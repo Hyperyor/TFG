@@ -14,12 +14,11 @@ namespace Core
         public virtual void UpgradeItem(int id)
         {
             //The condition of checking for money
-            if (DataManager.data.Money >= models[id].price)
+            if (DataManager.data.Money >= models[id].priceData.price)
             {
                 //With a successful purchase
-                DataManager.data.Money -= models[id].price; //take money
+                DataManager.data.Money -= models[id].priceData.price; //take money
                 Managers.Instance.audioManager.PlaySound(Managers.Instance.audioManager.cash); //play a sound
-                //items[id].itemData.price = items[id].itemData.price * 2; //Increasing the price by 2
                 priced = true; //this means we CAN upgrade the item
             }
         }

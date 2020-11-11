@@ -26,9 +26,9 @@ namespace Core
             iconImage.sprite = model.icon;
             nameText.text = model.upgradeName;
             descriptionText.text = model.description + ": " + model.value + "$";
-            priceText.text = ":" + UIManager.IntParseToString(model.price) + "$";
+            priceText.text = ":" + UIManager.IntParseToString(model.priceData.price) + "$";
 
-            if(DataManager.data.Money >= model.price)
+            if(DataManager.data.Money >= model.priceData.price)
             {
                 CanBuy(true);
             }
@@ -62,10 +62,5 @@ namespace Core
 
     }
 
-    //The class that stores the data to save the Item
-    //[Serializable]
-    //public class UpgradeItemData
-    //{
-    //    public long price;
-    //}
+    
 }

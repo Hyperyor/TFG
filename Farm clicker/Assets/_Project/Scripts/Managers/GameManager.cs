@@ -70,7 +70,7 @@ namespace Core
         public void ExitApp()
         {
             //save game
-
+            DataManager.SaveData();
             //closing the app
             exit.Exit();
         }

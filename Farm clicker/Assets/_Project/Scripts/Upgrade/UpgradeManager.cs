@@ -7,8 +7,6 @@ namespace Core
 
         [Header("Components")]
         public ClickUpgrade clickUpgrade;
-        public ResidentsUpgrade residentsUpgrade;
-        public ComfortUpgrade comfortUpgrade;
         public AutomationUpgrade automationUpgrade;
 
         private void Awake()
@@ -22,17 +20,7 @@ namespace Core
         {
             clickUpgrade.UpgradeItem(itemId); //Call the upgrade method in the click Upgrade script (whose ID item is the upgrade)
         }
-
-        public void ResidentsUpgrade(int itemId)
-        {
-            residentsUpgrade.UpgradeItem(itemId);
-        }
-
-        public void ComfortUpgrade(int itemId)
-        {
-            comfortUpgrade.UpgradeItem(itemId);
-        }
-
+        
         public void AutomationUpgrade(int itemId)
         {
             automationUpgrade.UpgradeItem(itemId);
@@ -55,22 +43,11 @@ namespace Core
             UpgradeListClear();
 
             //Write items to the cleared list
-            //for (int i = 0; i < cityUpgrade.items.Count; i++)
-            //{
-            //    DataManager.upgradeData.cityItems.Add(cityUpgrade.items[i].itemData);
-            //}
-            //for (int i = 0; i < residentsUpgrade.items.Count; i++)
-            //{
-            //    DataManager.upgradeData.residentsItems.Add(residentsUpgrade.items[i].itemData);
-            //}
-            //for (int i = 0; i < comfortUpgrade.items.Count; i++)
-            //{
-            //    DataManager.upgradeData.comfortItems.Add(comfortUpgrade.items[i].itemData);
-            //}
-            //for (int i = 0; i < automationUpgrade.items.Count; i++)
-            //{
-            //    DataManager.upgradeData.automationItems.Add(automationUpgrade.items[i].itemData);
-            //}
+            for (int i = 0; i < clickUpgrade.models.Count; i++)
+            {
+                DataManager.upgradeData.clickItems.Add(clickUpgrade.models[i].priceData);
+            }
+            
 
             //save all data
             DataManager.SaveData();
@@ -78,37 +55,23 @@ namespace Core
         //load data
         public void UpgradeLoad()
         {
-            //if (DataManager.upgradeData.cityItems.Count > 0)
-            //    for (int i = 0; i < cityUpgrade.items.Count; i++)
-            //    {
-            //        //write item from file to item on scene
-            //        cityUpgrade.items[i].itemData = DataManager.upgradeData.cityItems[i];
-            //    }
-            //if (DataManager.upgradeData.residentsItems.Count > 0)
-            //    for (int i = 0; i < residentsUpgrade.items.Count; i++)
-            //    {
-            //        residentsUpgrade.items[i].itemData = DataManager.upgradeData.residentsItems[i];
-            //    }
-            //if (DataManager.upgradeData.comfortItems.Count > 0)
-            //    for (int i = 0; i < comfortUpgrade.items.Count; i++)
-            //    {
-            //        comfortUpgrade.items[i].itemData = DataManager.upgradeData.comfortItems[i];
-            //    }
-            //if (DataManager.upgradeData.automationItems.Count > 0)
-            //    for (int i = 0; i < automationUpgrade.items.Count; i++)
-            //    {
-            //        automationUpgrade.items[i].itemData = DataManager.upgradeData.automationItems[i];
-            //    }
+            if(DataManager.upgradeData.clickItems.Count > 0)
+            {
+                //write item from file to item on scene
+                for (int i = 0; i < DataManager.upgradeData.clickItems.Count; i++)
+                {
+                    clickUpgrade.models[i].priceData = DataManager.upgradeData.clickItems[i];
+                }
+            }
 
+            UpdateUI();
+            
         }
 
         //Сlear method
         void UpgradeListClear()
         {
-            //DataManager.upgradeData.cityItems.Clear();
-            //DataManager.upgradeData.residentsItems.Clear();
-            //DataManager.upgradeData.comfortItems.Clear();
-            //DataManager.upgradeData.automationItems.Clear();
+            DataManager.upgradeData.clickItems.Clear();
         }
     }
 }

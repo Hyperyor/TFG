@@ -33,7 +33,7 @@ namespace Core
             {
                 data.isFirstStartComplete = true;
 
-                data.Money = 100;
+                data.Money = 10;
                 data.MoneyByClick = 1;
 
                 SaveData();
