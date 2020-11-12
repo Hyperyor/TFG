@@ -16,7 +16,7 @@ namespace Core
         {
             GameObject particle = Instantiate(particleSystem.gameObject); //Create the effect on scene
             //particle.transform.parent = Camera.main.transform; //Put it under the parent
-            particle.transform.parent = canvas.transform;
+            particle.transform.SetParent(canvas.transform);// = canvas.transform;
             particle.GetComponent<RectTransform>().localPosition = new Vector3(0, 0, 0);
             particle.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
             particleSystem.Play(); //Play

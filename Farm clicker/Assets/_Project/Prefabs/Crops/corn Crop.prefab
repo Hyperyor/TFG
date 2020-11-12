@@ -48,9 +48,9 @@ MonoBehaviour:
   - {fileID: 21300024, guid: 5f61ce38625ed8646ac2502cca9e24eb, type: 3}
   - {fileID: 21300038, guid: 5f61ce38625ed8646ac2502cca9e24eb, type: 3}
   - {fileID: 21300052, guid: 5f61ce38625ed8646ac2502cca9e24eb, type: 3}
-  price: 30
-  benefits: 10
+  price: 2500
+  benefits: 500
   itemName: Corn
   description: 'Benefits: '
   icon: {fileID: 21300080, guid: 5f61ce38625ed8646ac2502cca9e24eb, type: 3}
-  harvestTime: 20
+  harvestTime: 200

@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 7799434480928983181, guid: 9bfdcf29d1ba1bf4992b3cba61fdb4b5,
         type: 3}
       propertyPath: price
-      value: 30
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7799434480928983181, guid: 9bfdcf29d1ba1bf4992b3cba61fdb4b5,
         type: 3}
@@ -115,7 +115,12 @@ PrefabInstance:
     - target: {fileID: 7799434480928983181, guid: 9bfdcf29d1ba1bf4992b3cba61fdb4b5,
         type: 3}
       propertyPath: harvestTime
-      value: 20
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799434480928983181, guid: 9bfdcf29d1ba1bf4992b3cba61fdb4b5,
+        type: 3}
+      propertyPath: benefits
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bfdcf29d1ba1bf4992b3cba61fdb4b5, type: 3}

@@ -31,7 +31,7 @@ namespace Core
 
         private void Awake()
         {
-            //Sigleton init befor scene load
+            //Sigleton init before scene load
             Init();
         }
 

@@ -6,7 +6,7 @@ namespace Core
     public sealed class UIManager : MonoBehaviour
     {
         //enum
-        public enum ShopScreenType { Closed, ClickScreen, ResidentsScreen, ComfortScreen, AutomationScreen }
+        public enum ShopScreenType { Closed, ClickScreen, AutomationScreen }
 
         [Header("Screens")]
         public GameObject ClickScreen;

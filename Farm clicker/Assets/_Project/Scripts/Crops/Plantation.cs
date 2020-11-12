@@ -11,14 +11,7 @@ namespace Crops
     {
         [SerializeField]
         private HarvestLine[] harvestLineList = new HarvestLine[7];
-
-        //[SerializeField]
-        //private int unlockPrice;
-
-        //[SerializeField]
-        //private int linesUnlocked;
-
-        //public PlantationData plantationData;
+        
 
         [SerializeField]
         private Button unlockButton;

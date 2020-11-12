@@ -29,16 +29,5 @@ public class AudioVolume : MonoBehaviour {
 
         Managers.Instance.audioManager.ChangeVolume(audioMix, sliderValue, volumeVariableName);
 
-        ////inicial = 0
-        ////final = -40
-        ////final - inicial - final * valor + final
-        //float finalVolumeValue = 0 - (-40) * sliderValue + -40;
-
-        //if(finalVolumeValue == -40)
-        //{
-        //    finalVolumeValue = -80;
-        //}
-
-        //audioMix.SetFloat(volumeVariableName, finalVolumeValue);
     }
 }
