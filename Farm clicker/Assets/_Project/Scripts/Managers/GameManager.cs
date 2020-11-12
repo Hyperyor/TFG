@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Firebase;
+using Firebase.Analytics;
+using System;
 
 namespace Core
 {
@@ -8,6 +11,11 @@ namespace Core
     {
         [SerializeField]
         private ExitApp exit;
+
+        private void Start()
+        {
+            
+        }
 
         //The method is invoked by tapping the screen
         public void Click()

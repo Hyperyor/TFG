@@ -1326,7 +1326,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 17.5
+  m_fontSize: 17.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 7.35
+  m_fontSize: 7.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7867,7 +7867,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 7.45
+  m_fontSize: 7.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11183,7 +11183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50.052002, y: -13.050003}
+  m_AnchoredPosition: {x: 50.052002, y: -13.05}
   m_SizeDelta: {x: 99.2, y: 26.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1777323976
@@ -11666,7 +11666,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 7.6
+  m_fontSize: 7.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -11773,10 +11773,10 @@ RectTransform:
   m_Father: {fileID: 560556684}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.11087501, y: 0.3144921}
-  m_AnchorMax: {x: 0.8938124, y: 0.6486119}
-  m_AnchoredPosition: {x: -4.5, y: 8.25}
-  m_SizeDelta: {x: -1352.8, y: -922.5}
+  m_AnchorMin: {x: 0.5, y: 0.48400003}
+  m_AnchorMax: {x: 0.5, y: 0.48400003}
+  m_AnchoredPosition: {x: 0, y: 0.75}
+  m_SizeDelta: {x: 150.19995, y: 104.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1910645224
 MonoBehaviour:
@@ -13748,7 +13748,7 @@ PrefabInstance:
     - target: {fileID: 8362933755239792060, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -114
+      value: -113.99988
       objectReference: {fileID: 0}
     - target: {fileID: 8362933755239792060, guid: cb1cf5ce9e26d22439890f046726023a,
         type: 3}

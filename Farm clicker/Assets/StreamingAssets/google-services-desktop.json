@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "433292486699",
+    "firebase_url": "https://farm-clicker-f4fe0.firebaseio.com",
+    "project_id": "farm-clicker-f4fe0",
+    "storage_bucket": "farm-clicker-f4fe0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433292486699:android:80ef4cd0dc5d979c67226e",
+        "android_client_info": {
+          "package_name": "com.TFG.JLBN"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433292486699-4qaa6pr5omku0jt7p0qus6799s748nb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBF3TA13iqU6Jnzy9NMNUEiaKouRPW_om8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433292486699-4qaa6pr5omku0jt7p0qus6799s748nb2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

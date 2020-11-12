@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using Crops;
+using Firebase;
+using Firebase.Analytics;
+using System;
 
 namespace Core
 {
@@ -26,11 +29,39 @@ namespace Core
                 Destroy(gameObject);
 
             Instance = this;
+
+            try
+            {
+
+
+                FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
+                {
+                    FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);
+                }
+                );
+
+                
+            }
+            catch (Exception firebaseEx)
+            {
+                Debug.Log("Firebase falla");
+            }
+
+            try
+            {
+                FirebaseAnalytics.LogEvent(Firebase.Analytics.FirebaseAnalytics.EventLogin);
+            }
+            catch(Exception loginex)
+            {
+                Debug.Log("Error al logear");
+            }
+
         }
         #endregion
 
         private void Awake()
         {
+
             //Sigleton init before scene load
             Init();
         }
